@@ -89,7 +89,6 @@ footer {
     border-radius: 50%;
     z-index: 3;
     clip-path: circle(50% at 50% 50%);
-    cursor: none;
 }
 
 #overlay {
@@ -100,13 +99,15 @@ footer {
     height: 100%;
     background: black;
     z-index: 2;
-
+    cursor: none;
 }
+
 #target {
     position: relative;
     width: 100%;
     z-index: 1;
 }
+
 #video{
     width: 100%;
 }

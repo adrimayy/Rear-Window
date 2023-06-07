@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F3F3F3;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+    padding: 0 10%;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+#intro, #lisa-scene, #jeff-scene {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    animation: fadein 2s;
+}
+
+p {
+    text-align: justify;
+    font-size: 20px;
+    line-height: 1.6;
+}
+p#footer{
+    text-align: center;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+#intro {
+    position: relative;
+    overflow: hidden;
+}
+#intro img {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.lens-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+#lens {
+    position: absolute;
+    background: url("rear_window_poster.jpg") no-repeat;
+    background-size: 334%;  /* adjust zoom level as needed */
+    pointer-events: none;
+    border-radius: 50%;
+    z-index: 3;
+    clip-path: circle(50% at 50% 50%);
+}
+
+#overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 2;
+
+}
+#target {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+#video{
+    width: 100%;
+}
+
+#title{
+    width: 200px;
+    margin-left:20px;
+}
+
+.curtain-container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.curtain {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.curtain img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Change to 'cover' if you don't want to stretch the image */
+    transition: transform 1s ease-in-out;
+}
+
+.curtain-open img {
+    transform: translateY(-100%);
+}

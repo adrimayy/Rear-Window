@@ -89,6 +89,7 @@ footer {
     border-radius: 50%;
     z-index: 3;
     clip-path: circle(50% at 50% 50%);
+    cursor: none;
 }
 
 #overlay {
@@ -139,7 +140,6 @@ footer {
     height: 100%;
     object-fit: fill; 
     transition: transform 1s ease-in-out;
-    cursor: none;
 }
 
 .curtain-open img {

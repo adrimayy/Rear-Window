@@ -6,7 +6,7 @@ window.onload = function() {
             if (index === curtains.length - 1) {
                 setTimeout(function() {
                     curtain.parentElement.style.display = 'none';
-                }, 1000); // This should match the transition duration in your CSS
+                }, 1000);
             }
         });
     });
